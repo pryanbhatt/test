@@ -1,0 +1,61 @@
+<h1>Digital Day</h1>
+<p> Welcome <%= user.name %></p>
+<a href="/users/logout">Logout</a>
+<a href="/dashboard/settings">Settings</a>
+<br/><br/>
+<div>
+
+
+<!--<form action="/dashboard/posts" method="POST" enctype="multipart/form-data">-->
+<!--<form id="form" enctype="multipart/form-data">-->
+<!--    <h2>My Digital Day</h2>-->
+<!--
+<div>
+    <label for="date">Today Is</label><br/>
+        <input
+        type="text"
+        name="date"
+        placeholder="Type date here ..."
+    />
+</div><br/><br/>
+-->
+    
+<form id="multi-form" enctype="multipart/form-data">
+    
+    
+    
+    <div>
+        <textarea name="note" id="note" placeholder="&#40;How did your digital day go?&#41;" cols="20" rows="20"></textarea>
+    </div><br/>
+    
+    <div>
+        <label for="docs">Upload Document or Images</label><br/>
+        <p><span><strong>Allowed file types: Word, Powerpoint, JPEG, PNG, PDF</strong></span></p>
+        <input type="file" id="docs" multiple="multiple" name="docs" class="multi" data-maxsize="6144" accept="pdf|pptx|ppt|doc|docx|tif|tiff|bmp|jpg|jpeg|gif|png|eps|raw|cr2|nef|orf|sr2"/>
+    <!--    <input class="multifile" type="file" name="docs[]" accept="image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf">-->
+    
+    </div>
+    
+    <p>Record a Voice Note</p>
+    <div class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record">Record</button>
+          <button class="stop">Stop</button>
+        </div>
+      
+    </div>
+
+    <div class="sound-clips"></div>
+
+    <br/><br/><br/>
+    <button type="submit" id="submit-button" class="btn btn-primary btn-block">Submit</button>
+    
+    <div id="status"></div>
+   
+<!--</form>-->
+       
+</form>
+    
+    </div>
+
